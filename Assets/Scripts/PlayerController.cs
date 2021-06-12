@@ -7,7 +7,10 @@ public class PlayerController : MonoBehaviour
     public LayerMask objectsLayer;
     public LayerMask waterLayer;
 
+    public GameController gameController;
+
     private bool isMoving;
+    private bool isDead;
     private Vector2 input;
     private float moveSpeed = 5;
     private Animator animator;
@@ -15,12 +18,12 @@ public class PlayerController : MonoBehaviour
 
     private void Awake() {
         animator = GetComponent<Animator>();
+        gameController = FindObjectOfType<GameController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(!isMoving){
+        if(!isMoving && !isDead && gameController.State == GameState.Game){
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
 
@@ -36,30 +39,42 @@ public class PlayerController : MonoBehaviour
 
                 if(CanWalk(targetPos)){
                     StartCoroutine(Move(targetPos));
-                    
-                    if(IsDead(targetPos))
-                        Debug.Log("Player is dead");
+                    isDead = IsDead(targetPos);
                 }
                                     
             }
         }
 
+        if(gameController.State == GameState.Win){
+            animator.SetBool("isWin", true);
+        }
+
+        if(!isMoving){
+            animator.SetBool("isDead",isDead);
+        }
+        
         animator.SetBool("isMoving", isMoving);
+    }
+
+    public void Reset(){
+        isMoving = false;
+        isDead = false;
+        animator.SetBool("isWin", false);
+        animator.SetFloat("moveY", -1f);
     }
 
     private bool CanWalk(Vector3 targetPos){
         if(Physics2D.OverlapCircle(targetPos, 0.3f, objectsLayer) != null){
             return false;
         }
-
         return true;
     }
 
     private bool IsDead(Vector3 targetPos){
         if(Physics2D.OverlapCircle(targetPos, 0.3f, waterLayer) != null){
+            gameController.UpdateGameState(GameState.Dead);
             return true;
         }
-
         return false;
     }
 

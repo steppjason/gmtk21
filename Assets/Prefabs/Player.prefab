@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -161455529
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3427114271967980436, guid: 314c30b9d00a3f54f8d6455d82348a9d, type: 3}
+  m_Sprite: {fileID: 6480803066212409350, guid: 18258f0165a7f8041827092ffbdfaef9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   waterLayer:
     serializedVersion: 2
     m_Bits: 16
+  gameController: {fileID: 0}
 --- !u!95 &8578180211822872091
 Animator:
   serializedVersion: 3
