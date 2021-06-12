@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     public GameController gameController;
 
-    private bool isMoving;
+    public bool isMoving {get; set;}
     private bool isDead;
     private Vector2 input;
     private float moveSpeed = 5;

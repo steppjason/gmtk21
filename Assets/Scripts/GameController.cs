@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    const int CREDITS = 6;
+    const int CREDITS = 8;
 
     public GameObject startScreen;
     public GameObject gameOverScreen;
@@ -29,6 +29,9 @@ public class GameController : MonoBehaviour
     private GameObject Player_2_Start;
     private GameObject Player_2_End;
 
+    private PlayerController player1Controller;
+    private PlayerController player2Controller;
+
     private bool player_1_win;
     private bool player_2_win;
 
@@ -43,17 +46,22 @@ public class GameController : MonoBehaviour
         UpdateGameState(GameState.StartScreen);
         player_1_win = false;
         player_2_win = false;
+        player1Controller = player_1.GetComponent<PlayerController>();
+        player2Controller = player_2.GetComponent<PlayerController>();
     }
 
     void Update()
     {
-        Debug.Log(State);
-
+       
         if(State == GameState.StartScreen){
 
             if(Input.GetKeyDown("return")){
                 startSound.Play();
                 StartCoroutine(SwitchScene(LevelIndex, GameState.Game));
+            }
+
+            if(Input.GetKeyDown("escape")){
+                QuitGame();
             }
         }
         
@@ -69,15 +77,21 @@ public class GameController : MonoBehaviour
                     StartCoroutine(NextLevel(LevelIndex, GameState.Game));
             }
                 
-
+            if(Input.GetKeyDown("escape")){
+                QuitGame();
+            }
         } 
         
         if(State == GameState.Game || State == GameState.Dead) {
 
-            if(Input.GetKeyDown("r")){
+            if(Input.GetKeyDown("r") && !player1Controller.isMoving && !player2Controller.isMoving ){
                 Debug.Log("Game Reset");
                 ResetLevel();
                 StartCoroutine(gametext.FadeOut(0f));
+            }
+
+            if(Input.GetKeyDown("escape")){
+                QuitGame();
             }
         }
             
@@ -104,6 +118,17 @@ public class GameController : MonoBehaviour
             
 
         return false;
+    }
+
+    public void QuitGame()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+
+        #if UNITY_64
+            Application.Quit();
+        #endif
     }
 
     public void UpdateGameState(GameState state){
