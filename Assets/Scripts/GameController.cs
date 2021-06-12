@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    const int CREDITS = 4;
+    const int CREDITS = 6;
 
     public GameObject startScreen;
     public GameObject gameOverScreen;
