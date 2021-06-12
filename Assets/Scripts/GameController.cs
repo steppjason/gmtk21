@@ -5,13 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    const int CREDITS = 3;
+    const int CREDITS = 4;
 
     public GameObject startScreen;
     public GameObject gameOverScreen;
     public GameObject creditsScreen;
     public GameObject player_1;
     public GameObject player_2;
+
+    public AudioSource startSound;
+    public AudioSource levelWarpSound;
+    public AudioSource winSound;
+    public AudioSource deathSound;
 
     public GameState State {get;set;}
     public int LevelIndex {get; set;}
@@ -46,9 +51,10 @@ public class GameController : MonoBehaviour
 
         if(State == GameState.StartScreen){
 
-            if(Input.GetKeyDown("return"))
+            if(Input.GetKeyDown("return")){
+                startSound.Play();
                 StartCoroutine(SwitchScene(LevelIndex, GameState.Game));
-            
+            }
         }
         
         if(State == GameState.Game){
@@ -56,6 +62,7 @@ public class GameController : MonoBehaviour
             if(CheckForWin()){
                 UpdateGameState(GameState.Win);
                 LevelIndex += 1;
+                
                 if(LevelIndex == CREDITS)
                     StartCoroutine(NextLevel(LevelIndex, GameState.Credits));
                 else
@@ -90,8 +97,11 @@ public class GameController : MonoBehaviour
             player_2_win = false;
         }
 
-        if(player_1_win && player_2_win)
+        if(player_1_win && player_2_win){
+            winSound.Play();
             return true;
+        }
+            
 
         return false;
     }
@@ -146,7 +156,8 @@ public class GameController : MonoBehaviour
     IEnumerator NextLevel(int scene, GameState gameState){
         player_1_win = false;
         player_2_win = false;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
+        levelWarpSound.Play();
         yield return fader.FadeIn(1f);
         yield return SceneManager.LoadSceneAsync(scene);
         UpdateGameState(gameState);

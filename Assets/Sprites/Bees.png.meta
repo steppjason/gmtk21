@@ -1,28 +1,37 @@
 fileFormatVersion: 2
-guid: 7150b2038b748704c8f66c59d493dd10
+guid: 5e32dd4d76dd35245aab0793f76c1e9c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1082768516706959448
-    second: Doodads_0
+      213: -2332983640317547041
+    second: Bees_0
   - first:
-      213: -5572677904928601248
-    second: Doodads_1
+      213: -126367013384081014
+    second: Bees_1
   - first:
-      213: -3887906852863502324
-    second: Doodads_2
+      213: -5474950934700313699
+    second: Bees_2
   - first:
-      213: -2166399136106583044
-    second: Doodads_3
+      213: -4355955560570230870
+    second: Bees_3
   - first:
-      213: 8819039208232360711
-    second: Doodads_4
+      213: 8151939860842676794
+    second: Bees_4
   - first:
-      213: -6152294958986766455
-    second: Doodads_5
+      213: 3751641191456039098
+    second: Bees_5
   - first:
-      213: -4647815019935911917
-    second: Doodads_6
+      213: 2763684438416161042
+    second: Bees_6
+  - first:
+      213: -6767935712859175085
+    second: Bees_7
+  - first:
+      213: 4983148615625257047
+    second: Bees_8
+  - first:
+      213: -6592980452668669618
+    second: Bees_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,11 +133,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Doodads_0
+      name: Bees_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -138,98 +147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8508b4caa34c60f00800000000000000
-      internalID: 1082768516706959448
+      spriteID: fdd23146db39f9fd0800000000000000
+      internalID: -2332983640317547041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Doodads_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06b001588fed9a2b0800000000000000
-      internalID: -5572677904928601248
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Doodads_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c08934bf0516b0ac0800000000000000
-      internalID: -3887906852863502324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Doodads_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cfb67aab6776fe1e0800000000000000
-      internalID: -2166399136106583044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Doodads_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70b9ee24f65836a70800000000000000
-      internalID: 8819039208232360711
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Doodads_5
+      name: Bees_1
       rect:
         serializedVersion: 2
         x: 16
@@ -243,14 +168,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 987da20c458ae9aa0800000000000000
-      internalID: -6152294958986766455
+      spriteID: a813aefeedd0f3ef0800000000000000
+      internalID: -126367013384081014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Doodads_6
+      name: Bees_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93be76e1211504b0800000000000000
+      internalID: -5474950934700313699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bees_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7e2da1f798c83c0800000000000000
+      internalID: -4355955560570230870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bees_4
       rect:
         serializedVersion: 2
         x: 64
@@ -264,8 +231,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 310bef25dd4af7fb0800000000000000
-      internalID: -4647815019935911917
+      spriteID: a3200e3dc12812170800000000000000
+      internalID: 8151939860842676794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bees_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0e57d59c1801430800000000000000
+      internalID: 3751641191456039098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bees_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219f117aa549a5620800000000000000
+      internalID: 2763684438416161042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bees_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3574954c3567312a0800000000000000
+      internalID: -6767935712859175085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bees_8
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750b2599343b72540800000000000000
+      internalID: 4983148615625257047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bees_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41079b95370184a0800000000000000
+      internalID: -6592980452668669618
       vertices: []
       indices: 
       edges: []

@@ -942,9 +942,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'a game by Jason Stepp
+  m_text: 'A game by Jason Stepp
 
-    music by Brandon Stepp'
+    Music by Brandon Stepp'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 548d638d88cb65b42ad0ce72a8f887db, type: 2}
   m_sharedMaterial: {fileID: -4321448146223151323, guid: 548d638d88cb65b42ad0ce72a8f887db, type: 2}

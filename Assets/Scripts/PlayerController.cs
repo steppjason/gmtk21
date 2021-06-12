@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour
     private bool IsDead(Vector3 targetPos){
         if(Physics2D.OverlapCircle(targetPos, 0.3f, waterLayer) != null){
             gameController.UpdateGameState(GameState.Dead);
+            gameController.deathSound.Play();
             return true;
         }
         return false;
