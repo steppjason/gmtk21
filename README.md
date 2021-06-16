@@ -1,4 +1,4 @@
-# yoyopoyo
+# YoyoPoyo
 
 Made in 24 hours for the GameMaker Game Jam 2021 (GMTK Game Jam).
 
